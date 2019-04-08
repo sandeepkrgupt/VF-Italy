@@ -1,0 +1,30 @@
+componentDidMount() -> this method is used when ever your component is loaded on browser and you want to perform any other task.
+e.g - opening a popup window.
+
+componentDidMount() {
+        const {
+            handleModalClose
+        } = this.props;         
+        ExternalizeComponent.externalizeComponent(this.externalExecuteMethods.handleModalCancel, {
+            functionCallback: () => {
+                return handleModalClose();
+            }
+        });
+    }
+    
+render() {
+        const {handleModalClose} = this.props;
+        return (
+            <Modal config={this.getModalConfig()}>
+                <ModalHeader config={this.getHeaderConfig()} handleButtonClick={handleModalClose} />
+                <ModalBody>
+                    {this.getModalBody()}
+                </ModalBody>
+                <ModalFooter>
+                    {this.getFooterBody()}
+                </ModalFooter>
+            </Modal>
+        );
+    }
+ --------------------------------------
+ 
