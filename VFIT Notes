@@ -27,4 +27,12 @@ render() {
         );
     }
  --------------------------------------
- 
+React Intl:- it is part of FormatJS. It provides bindings to React via its components and API.
+Features
+Display numbers with separators.
+Display dates and times correctly.
+Display dates relative to "now".
+Pluralize labels in strings.
+Support for 150+ languages.
+Runs in the browser and Node.js.
+Built on standards.
