@@ -37,4 +37,46 @@ Display dates relative to "now".
 Pluralize labels in strings.
 Support for 150+ languages.
 Runs in the browser and Node.js.
-Built on standards.
+Built on standards
+-----------------------
+React Router DOM :- DOM bindings for React Router.
+-----------------------
+webpack -
+webpack is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, 
+yet it is also capable of transforming, bundling, or packaging just about any resource or asset.
+----------------------
+yeoman -
+Yeoman helps you to kickstart new projects, prescribing best practices and tools to help you stay productive.
+
+To do so, we provide a generator ecosystem. 
+A generator is basically a plugin that can be run with the yo command to scaffold complete projects or useful parts.
+-----------------------
+Mocha Test Case :-
+Mocha is a feature-rich JavaScript test framework running on Node.js and in the browser,
+making asynchronous testing simple and fun. Mocha tests run serially, 
+allowing for flexible and accurate reporting, while mapping uncaught exceptions to the correct test cases.
+----------------------
+Chai for writing Test Case :-
+Chai is an assertion library, similar to Node's built-in assert. 
+It makes testing much easier by giving you lots of assertions you can run against your code
+var chai = require('chai');  
+var assert = chai.assert;    // Using Assert style
+var expect = chai.expect;    // Using Expect style
+var should = chai.should();  // Using Should style
+--------------------
+Enzyme :-
+Enzyme is a JavaScript Testing utility for React that makes it easier to test your React Components' output. 
+You can also manipulate, traverse, and in some ways simulate runtime given the output.
+-------------------
+Eslint :-
+ESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code. 
+In many ways, it is similar to JSLint and JSHint
+Feature:-
+ESLint is completely pluggable, every single rule is a plugin and you can add more at runtime.
+Example:-
+{
+    "rules": {
+        "semi": ["error", "always"],
+        "quotes": ["error", "double"]
+    }
+}
