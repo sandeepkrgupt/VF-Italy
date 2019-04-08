@@ -27,7 +27,9 @@ render() {
         );
     }
  --------------------------------------
-React Intl:- it is part of FormatJS. It provides bindings to React via its components and API.
+React Intl:- This library provides 
+React components and an API to format dates, numbers, and strings, including pluralization and handling translations. 
+it is part of FormatJS. It provides bindings to React via its components and API.
 Features
 Display numbers with separators.
 Display dates and times correctly.
