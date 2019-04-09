@@ -43,7 +43,9 @@ ComponentDidMount() :- is invoked immediately after a component is mounted.
 Initialization that requires DOM nodes should go here. 
 his method is a good place to set up any subscriptions. 
 If you do that, don’t forget to unsubscribe in componentWillUnmount().
-
+Note :-
+componentDidMount is where an AJAX request should be made in a React component. This method will be executed when the component
+“mounts” (is added to the DOM) for the first time. This method is only executed once during the component’s life.
 ----------------------
 componentDidUpdate() :- is invoked immediately after updating occurs. This method is not called for the initial render.
 This is also a good place to do network requests as long as you compare the current props to previous props like below.
