@@ -1,0 +1,73 @@
+The Component Lifecycle
+Each component has several “lifecycle methods” that you can override to run code at particular times in the process. 
+You can use this lifecycle diagram as a cheat sheet. In the list below, commonly used lifecycle methods are marked as bold. 
+The rest of them exist for relatively rare use cases.
+Mounting
+These methods are called in the following order when an instance of a component is being created and inserted into the DOM:
+
+constructor()
+static getDerivedStateFromProps()
+render()
+componentDidMount()
+
+Updating
+An update can be caused by changes to props or state. These methods are called in the following order when a component is being re-rendered:
+
+static getDerivedStateFromProps()
+shouldComponentUpdate()
+render()
+getSnapshotBeforeUpdate()
+componentDidUpdate()
+
+Unmounting
+This method is called when a component is being removed from the DOM:
+
+componentWillUnmount()
+
+MEthods Description :-
+render :- The render() method is the only required method in a class component.
+----------------------
+constructor(props) :-
+The constructor for a React component is called before it is mounted. 
+When implementing the constructor for a React.Component subclass, 
+you should call super(props) before any other statement. Otherwise, 
+this.props will be undefined in the constructor, which can lead to bugs.
+constructor(props) {
+  super(props);
+  // Don't call this.setState() here!
+  this.state = { counter: 0 };
+  this.handleClick = this.handleClick.bind(this);
+}
+---------------------
+ComponentDidMount() :- is invoked immediately after a component is mounted.
+Initialization that requires DOM nodes should go here. 
+his method is a good place to set up any subscriptions. 
+If you do that, don’t forget to unsubscribe in componentWillUnmount().
+
+----------------------
+componentDidUpdate() :- is invoked immediately after updating occurs. This method is not called for the initial render.
+This is also a good place to do network requests as long as you compare the current props to previous props like below.
+componentDidUpdate(prevProps) {
+  // Typical usage (don't forget to compare props):
+  if (this.props.userID !== prevProps.userID) {
+    this.fetchData(this.props.userID);
+  }
+}
+----------------------
+componentWillUnmount() is invoked immediately before a component is unmounted and destroyed. 
+Perform any necessary cleanup in this method, such as invalidating timers, canceling network requests, 
+or cleaning up any subscriptions that were created in componentDidMount().
+NOTE-
+You should not call setState() in here because the component will never be re-rendered. 
+Once a component instance is unmounted, it will never be mounted again.
+---------------------
+Rarelly used Methods :-
+Use shouldComponentUpdate() to let React know if a component’s output is not affected by the current change in state or props.
+shouldComponentUpdate(nextProps, nextState)
+----------------------
+getDerivedStateFromProps :- getDerivedStateFromProps is invoked right before calling the render method.
+----------------------
+setState(update,callback):- 
+setState() enqueues changes to the component state and tells React that this component and its children need to be 
+re-rendered with the updated state. 
+
