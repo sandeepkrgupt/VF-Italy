@@ -20,12 +20,6 @@ render() {
         return (
             <Modal config={this.getModalConfig()}>
                 <ModalHeader config={this.getHeaderConfig()} handleButtonClick={handleModalClose} />
-                <ModalBody>
-                    {this.getModalBody()}
-                </ModalBody>
-                <ModalFooter>
-                    {this.getFooterBody()}
-                </ModalFooter>
             </Modal>
         );
     }
