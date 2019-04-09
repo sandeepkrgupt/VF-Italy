@@ -1,8 +1,8 @@
 componentDidMount() -> It is invoked immediately after a component is mounted.
 componentDidMount is where an AJAX request should be made in a React component. 
 This method will be executed when the component
-“mounts” (is added to the DOM) for the first time. This method is only executed once during the component’s life.
-you can to perform task like - opening a popup window.
+“mounts” (is added to the DOM) for the first time. This method is only executed once during the component’s life cycle.
+you can perform task like - opening a popup window.
 
 componentDidMount() {
         const {
