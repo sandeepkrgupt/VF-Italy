@@ -38,11 +38,6 @@ Built on standards
 -----------------------
 React Router DOM :- DOM bindings for React Router.
 ----------------------
-componentWillReceiveProps is called before componentWillUpdate in React's update lifecycle. 
-You are right that componentWillReceiveProps allows you to call setState. 
-On the other hand componentWillUpdate is a callback to use when you need to respond to a state change.
-
------------------------
 webpack -
 webpack is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, 
 yet it is also capable of transforming, bundling, or packaging just about any resource or asset.
